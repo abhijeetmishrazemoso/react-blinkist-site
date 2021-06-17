@@ -1,9 +1,10 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
 import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
 import HeaderExploreDropDown from './HeaderExploreDropDown';
 
 export default {
-    title: 'Explore Icon DropDown',
+    title: 'Atom/Explore Icon DropDown',
     component: ArrowDropDownIcon,
 };
 
@@ -13,6 +14,12 @@ export const ExportDropDown = Template.bind({});
 ExportDropDown.args = {
  text: 'Explore',
  fontSize: 'large',
- alignItems: 'center',
  justify: 'flex-start',
-}
+};
+
+export const ExportDropDownUp = Template.bind({});
+ExportDropDownUp.args = {
+ text: 'Explore',
+ fontSize: 'large',
+ justify: 'flex-start',
+};

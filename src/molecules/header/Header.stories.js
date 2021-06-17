@@ -1,12 +1,12 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
 import Header from './Header';
 
 export default {
-    title: 'Blinkist Header',
+    title: 'Molecule/Blinkist Header',
     component: Header,
 };
-
-const Template = (args) => <Header {...args}/>;
+const Template = (args) => <Header {...args} />;
 
 export const HeaderBlinkist = Template.bind({});
 

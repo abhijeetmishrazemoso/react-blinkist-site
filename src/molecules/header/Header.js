@@ -2,15 +2,15 @@ import {
    Container, createMuiTheme, Grid, makeStyles, ThemeProvider, Typography
    } from '@material-ui/core';
 import React from 'react';
-import HeaderExploreDropDown from '../atoms/HeaderExploreDropDown';
-import IconAndSiteNm from '../atoms/IconAndSiteNm';
+import HeaderExploreDropDown from '../../atoms/header/HeaderExploreDropDown';
+import IconAndSiteNm from '../../atoms/IconAndSiteNm';
 import './Header.css';
 
-function Header({ ...props }) {
+const Header = () => {
 const useStyles = makeStyles({
   root: {
       padding: 0, 
-      backgroundColor: 'aliceblue',  
+      backgroundColor: 'paper',  
       height: 500, 
   }
 });
@@ -28,7 +28,7 @@ const classes = useStyles();
     return (
       <ThemeProvider theme={theme}>
         <Container maxWidth="xl" className={classes.root}>
-          <Container maxWidth="md" style={{ backgroundColor: 'lightcoral' }}>
+          <Container maxWidth="md" style={{ backgroundColor: 'white' }}>
             <Grid container direction="row" spacing={5}>
               <Grid item sm={2}>
                 <IconAndSiteNm text="Blinkist" />
@@ -54,6 +54,6 @@ const classes = useStyles();
         </Container>
       </ThemeProvider>
     );
-}
+};
 
 export default Header;

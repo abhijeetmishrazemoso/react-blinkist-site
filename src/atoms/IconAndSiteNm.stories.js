@@ -2,10 +2,11 @@ import React from 'react';
 import IconAndSiteNm from './IconAndSiteNm';
 
 export default {
-    title: 'Icon H1 Molecule',
+    title: 'Atom/Icon H1 Molecule',
     component: IconAndSiteNm,
 };
 
+// eslint-disable-next-line react/jsx-props-no-spreading
 const Template = (args) => <IconAndSiteNm {...args} />;
 
 export const IconH1Mol = Template.bind({});

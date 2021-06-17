@@ -1,10 +1,13 @@
+/* eslint-disable import/prefer-default-export */
 import React from 'react';
 import PropTypes from 'prop-types';
 
 import { Button } from './Button';
 import './header.css';
 
-export const Header = ({ user, onLogin, onLogout, onCreateAccount }) => (
+export const Header = ({
+ user, onLogin, onLogout, onCreateAccount 
+}) => (
   <header>
     <div className="wrapper">
       <div>
