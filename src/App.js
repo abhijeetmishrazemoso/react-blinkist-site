@@ -1,7 +1,8 @@
 import React from 'react';
 import './App.css';
 import { createMuiTheme, ThemeProvider } from '@material-ui/core';
-import Header from './molecules/Header';
+import Header from './organisms/header/Header';
+
 
 const font = "'Raleway', sans-serif";
 const theme = createMuiTheme({

@@ -2,14 +2,14 @@ import {
    Container, createMuiTheme, Grid, makeStyles, ThemeProvider, Typography
    } from '@material-ui/core';
 import React from 'react';
-import HeaderExploreDropDown from '../../atoms/header/HeaderExploreDropDown';
 import IconAndSiteNm from '../../atoms/IconAndSiteNm';
+import HeaderTextDropDown from '../header-dropdown/HeaderTextDropDown';
 import './Header.css';
 
 const Header = () => {
 const useStyles = makeStyles({
   root: {
-      padding: 0, 
+      padding: 10, 
       backgroundColor: 'paper',  
       height: 500, 
   }
@@ -35,7 +35,7 @@ const classes = useStyles();
               </Grid>
                       
               <Grid justify="center" item sm={2}>
-                <HeaderExploreDropDown text="Explore" fontSize="large" /> 
+                <HeaderTextDropDown text="Explore" fontSize="large" /> 
               </Grid>
 
               <Grid justify="center" item sm={2}>
@@ -47,7 +47,7 @@ const classes = useStyles();
               </Grid>
               
               <Grid justify="flex-end" item sm={4} style={{ textAlign: 'right' }}>
-                <HeaderExploreDropDown justify="flex-end" text="Account" fontSize="large" />  
+                <HeaderTextDropDown justify="flex-end" text="Account" fontSize="large" />  
               </Grid>
             </Grid>
           </Container>

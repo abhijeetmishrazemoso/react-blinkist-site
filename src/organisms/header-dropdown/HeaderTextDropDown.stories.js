@@ -1,14 +1,14 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
 import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
-import HeaderExploreDropDown from './HeaderExploreDropDown';
+import HeaderTextDropDown from './HeaderTextDropDown';
 
 export default {
     title: 'Atom/Explore Icon DropDown',
     component: ArrowDropDownIcon,
 };
 
-const Template = (args) => <HeaderExploreDropDown {...args} />;
+const Template = (args) => <HeaderTextDropDown {...args} />;
 
 export const ExportDropDown = Template.bind({});
 ExportDropDown.args = {

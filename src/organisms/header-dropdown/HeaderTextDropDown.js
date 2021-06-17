@@ -1,17 +1,14 @@
-/* eslint-disable jsx-a11y/click-events-have-key-events */
-/* eslint-disable jsx-a11y/no-static-element-interactions */
-/* eslint-disable react/jsx-no-comment-textnodes */
 import { Grid, Typography } from '@material-ui/core';
 import React from 'react';
 import PropTypes from 'prop-types';
 import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
 import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
 
-function HeaderExploreDropDown({
+function HeaderTextDropDown({
     justify, fontSize, text
 }) {
-    const arrowDown = <KeyboardArrowUpIcon fontSize={fontSize} />;
-    const arrowUp = <KeyboardArrowDownIcon fontSize={fontSize} />;
+    const arrowDown = <KeyboardArrowDownIcon fontSize={fontSize} />;
+    const arrowUp = <KeyboardArrowUpIcon fontSize={fontSize} />;
     const [menuOpen, setMenuOpen] = React.useState(false);
     const [icon, setIcon] = React.useState(arrowDown);
     const onClickChange = () => {
@@ -32,16 +29,16 @@ function HeaderExploreDropDown({
         </Grid>
       );
 }
-HeaderExploreDropDown.propTypes = {
+HeaderTextDropDown.propTypes = {
   justify: PropTypes.string,
   fontSize: PropTypes.string,
   text: PropTypes.string,
 };
 
-HeaderExploreDropDown.defaultProps = {
+HeaderTextDropDown.defaultProps = {
   justify: 'center',
   fontSize: 'default',
   text: 'Explore',
 };
 
-export default HeaderExploreDropDown;
+export default HeaderTextDropDown;

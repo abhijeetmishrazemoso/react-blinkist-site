@@ -8,4 +8,10 @@ export default {
     component: SearchIcon,
   };
 
-export const Template = (args) => <SearchIcon {...args} />;
+const Template = (args) => <SearchIcon {...args} />;
+
+export const SearchIconn = Template.bind({});
+
+SearchIconn.args = {
+  fontSize: "medium",
+};

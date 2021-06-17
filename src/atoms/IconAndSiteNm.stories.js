@@ -6,7 +6,6 @@ export default {
     component: IconAndSiteNm,
 };
 
-// eslint-disable-next-line react/jsx-props-no-spreading
 const Template = (args) => <IconAndSiteNm {...args} />;
 
 export const IconH1Mol = Template.bind({});
