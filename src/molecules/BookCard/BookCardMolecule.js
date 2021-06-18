@@ -17,17 +17,25 @@ function BookCardMolecule({imageSrc, progress, title, subtitle, ...props}){
                 </Box>
                 <Typography variant="h6" style={widthText}>Building an inclusive Organisation!</Typography>
                 <Typography variant="body1" style={widthText}>Stephen-Frost, Raafi Karim...</Typography>
-                <Box className="internal-grid-div">
-                    <Grid container direction="row" style={widthText}>
+                <Grid container direction="row">
+                    <Grid item direction="row" style={widthText}>
                         <Grid item>
-                            <AccessTimeIcon />
+                            <AccessTimeIcon />&nbsp;
                         </Grid>
                         <Grid item style={{alignItems: 'center'}}>
                             <Typography variant="body2">15-minute read</Typography>
                         </Grid>
+                    </Grid>
+                    <Grid item direction="row" justify="flex-end" style={{textAlign:"left", paddingLeft: 10}} wrap="nowrap">
+                        <Grid item>
+                            <PersonIcon />&nbsp;
                         </Grid>
-                    <Grid direction="row" style={widthText}><PersonIcon /> <Typography variant="body2">17.1k reads</Typography></Grid>
-                </Box>
+                        <Grid item style={{alignItems: 'center'}}>
+                            <Typography variant="body2">17.5K reads</Typography>
+                        </Grid>
+                    </Grid>
+                    
+                </Grid>
                 <LinearProgress variant='determinate' value={progress}/>
             </React.Fragment>);
 }
