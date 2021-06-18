@@ -1,5 +1,5 @@
 import {
-   Container, createMuiTheme, Grid, makeStyles, ThemeProvider, Typography
+   createMuiTheme, Grid, ThemeProvider, Typography
    } from '@material-ui/core';
 import React from 'react';
 import IconAndSiteNm from '../../atoms/IconAndSiteNm';
@@ -7,13 +7,13 @@ import HeaderTextDropDown from '../header-dropdown/HeaderTextDropDown';
 import './Header.css';
 
 const Header = () => {
-const useStyles = makeStyles({
-  root: {
-      padding: 10, 
-      backgroundColor: 'paper',  
-      height: 500, 
-  }
-});
+// const useStyles = makeStyles({
+//   root: {
+//       padding: 10, 
+//       backgroundColor: 'paper',  
+//       // height: 500, 
+//   }
+// });
 
 const font = "'Raleway', sans-serif";
   const theme = createMuiTheme({
@@ -24,12 +24,11 @@ const font = "'Raleway', sans-serif";
       }
     }
     });
-const classes = useStyles();
+// const classes = useStyles();
     return (
+      <>
       <ThemeProvider theme={theme}>
-        <Container maxWidth="xl" className={classes.root}>
-          <Container maxWidth="md" style={{ backgroundColor: 'white' }}>
-            <Grid container direction="row" spacing={5}>
+            <Grid container direction="row" spacing={5} style={{paddingTop: 25}}>
               <Grid item sm={2}>
                 <IconAndSiteNm text="Blinkist" />
               </Grid>
@@ -50,9 +49,8 @@ const classes = useStyles();
                 <HeaderTextDropDown justify="flex-end" text="Account" fontSize="large" />  
               </Grid>
             </Grid>
-          </Container>
-        </Container>
       </ThemeProvider>
+      </>
     );
 };
 

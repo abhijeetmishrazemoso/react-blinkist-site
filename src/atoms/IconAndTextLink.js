@@ -4,6 +4,9 @@ import PropTypes from 'prop-types';
 import HomeIcon from '@material-ui/icons/Home';
 
 function IconAndTextLink({ icon, text, href}) {
+
+    const mouseOverUnderline = (e) => {
+    };
     return (
         <Link href={href}>
             <Grid container direction="row" style={{ padding: 20 }}>

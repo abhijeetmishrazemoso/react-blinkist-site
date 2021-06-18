@@ -1,9 +1,9 @@
 import React from 'react';
-import HeaderExploreDropDown from '../atoms/header/HeaderExploreDropDown';
+import HeaderTextDropDown from './header-dropdown/HeaderTextDropDown';
 
 function ExploreIconChng() {
     return (
-      <HeaderExploreDropDown
+      <HeaderTextDropDown
         text="Explore"
         justify="flex-start" 
       />

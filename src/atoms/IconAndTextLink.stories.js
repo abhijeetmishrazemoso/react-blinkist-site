@@ -15,5 +15,5 @@ export const IconAndLink = Template.bind({});
 IconAndLink.args = {
     icon: someIcon,
     href: '#',
-    text: "Heritage",
+    text: "Entrepreneurship",
 };

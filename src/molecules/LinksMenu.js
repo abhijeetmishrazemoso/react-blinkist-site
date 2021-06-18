@@ -5,9 +5,6 @@ function LinksMenu() {
     return (
       <>
         <LinksRow justify="flex-start" />
-        <LinksRow justify="flex-end" />
-        <LinksRow justify="flex-end" />
-        <LinksRow justify="flex-end" />
       </>
     );
 }
