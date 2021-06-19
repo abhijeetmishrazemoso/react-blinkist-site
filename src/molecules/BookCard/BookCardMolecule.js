@@ -8,11 +8,11 @@ import './BookCard.css';
 
 function BookCardMolecule({imageSrc, progress, title, subtitle, ...props}){
     const widthText = {
-        paddingBottom:15, paddingLeft:10
+        paddingBottom:5, paddingLeft:10
     };
     return (
             <React.Fragment>
-                <Box className="flex-img" style={{ paddingLeft: 50, paddingRight: 50, paddingTop: 25}}>
+                <Box className="flex-img" style={{ paddingLeft: 20, paddingRight: 20}}>
                     <Image src={imageSrc}/>
                 </Box>
                 <Typography variant="h6" style={widthText}>Building an inclusive Organisation!</Typography>

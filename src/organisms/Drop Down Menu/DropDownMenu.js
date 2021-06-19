@@ -8,4 +8,4 @@ function DropDownMenu() {
     );
 }
 
-export default DropDownMenu
+export default DropDownMenu;
