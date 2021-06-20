@@ -7,13 +7,6 @@ import HeaderTextDropDown from '../header-dropdown/HeaderTextDropDown';
 import './Header.css';
 
 const Header = () => {
-// const useStyles = makeStyles({
-//   root: {
-//       padding: 10, 
-//       backgroundColor: 'paper',  
-//       // height: 500, 
-//   }
-// });
 
 const font = "'Raleway', sans-serif";
   const theme = createMuiTheme({
@@ -34,19 +27,19 @@ const font = "'Raleway', sans-serif";
               </Grid>
                       
               <Grid justify="center" item sm={2}>
-                <HeaderTextDropDown text="Explore" fontSize="large" /> 
+                <HeaderTextDropDown text="Explore" fontSize="small" /> 
               </Grid>
 
               <Grid justify="center" item sm={2}>
-                <Typography variant="h6">My Library</Typography>
+                <Typography variant="body1">My Library</Typography>
               </Grid>
 
               <Grid justify="center" item sm={2}>
-                <Typography variant="h6">Add Book</Typography>
+                <Typography variant="body1">Add Book</Typography>
               </Grid>
               
               <Grid justify="flex-end" item sm={4} style={{ textAlign: 'right' }}>
-                <HeaderTextDropDown justify="flex-end" text="Account" fontSize="large" />  
+                <HeaderTextDropDown justify="flex-end" text="Account" fontSize="small" />  
               </Grid>
             </Grid>
       </ThemeProvider>

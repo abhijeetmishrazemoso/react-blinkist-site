@@ -46,8 +46,9 @@ function HeaderTextDropDown({
       return (
         <Grid container direction="row" justify={justify}>
           <div ref={divRef} onMouseOver={mouseOverUnderline} 
-          className={hoverStyle.root} onMouseOut={removeUnderline} onClick={onClickChange} style={{ display: 'flex', direction: 'row' }}>
-            <Typography variant="h6">{ text }</Typography>
+          className={hoverStyle.root} onMouseOut={removeUnderline} onClick={onClickChange} 
+          style={{ display: 'flex', direction: 'row' }}>
+            <Typography variant="body1">{ text }</Typography>
             {icon}
           </div>
         </Grid>

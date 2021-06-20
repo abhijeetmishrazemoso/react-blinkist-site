@@ -1,3 +1,4 @@
+import { Box } from '@material-ui/core';
 import React from 'react';
 import BookCard from '../../BookCard';
 import TabbedBooks from './TabbedBooks';
@@ -9,6 +10,10 @@ function getNewBookCard(imageSrc,readingTabProp, title, subtitle, index, key, up
 }
 function getCompleteTab(currReadingBookCards,currFinishedBookCards){
     return (<TabbedBooks booksCurrReading={currReadingBookCards} booksFinished={currFinishedBookCards}/>);
+}
+
+function getDummyNode(index){
+    return (<Box component="span" key={index} index={index}></Box>);
 }
 export default function TabsWithCards({ imageSrc }) {
     const currReading = [];
@@ -44,13 +49,13 @@ export default function TabsWithCards({ imageSrc }) {
             //get a new card with updated state
             currFinished[index] = getNewBookCard(propss.imageSrc, finished,
                 propss.title, propss.subtitle, index, propss.key, updateTabs);
-            currReading[index] = null;
+            currReading[index] = getDummyNode(index);
         }else{
             const tempBookCard = currFinished[index];
             const propss = tempBookCard.props;
             currReading[index] = getNewBookCard(propss.imageSrc, reading,
                 propss.title, propss.subtitle,propss.key, propss.key, updateTabs);
-            currFinished[index] = null;
+            currFinished[index] = getDummyNode(index);
         }
         setCurrReadingBookCards(currReading);
         setCurrFinishedBookCards(currFinished);

@@ -5,13 +5,13 @@ import CardMedia from '@material-ui/core/CardMedia';
 
 function AppPromotion() {
     const fontBold = {
-        fontWeight: 'fontWeightBold',
+        fontWeight: 'bolder',
       };
     return (
         <Grid container direction="row" style={{ backgroundColor: '#e5e5e5'}}>
               <Grid fontWeight="fontWeightBold" md={9} container item direction ="column" style={{textAlign: "left", padding: 20}}>
                 <Typography variant="caption" style={{ color: 'red' }}>New</Typography>  
-                <Typography variant="body1" style={{fontWeight: 'fontWeightBold', paddingBottom: 20 }}>
+                <Typography variant="body1" style={{fontWeight: 'Bold', paddingBottom: 20 }}>
                   Find AudioBooks on the Blinkist App</Typography>  
                 <Typography variant="body2" style={{ fontBold }}>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat necessitatibus, animi iusto odit ex repudiandae 
                 reprehenderit voluptates eveniet, deleniti beatae ipsum non, iste ea consequuntur.</Typography>

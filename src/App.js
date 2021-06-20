@@ -28,8 +28,8 @@ function App() {
         <Grid direction="column" xl={9} lg={10} sm={10} style={{ margin:'auto', backgroundColor: 'white' }}>
           <Container xl={6} maxWidth="md" style={{ backgroundColor: 'white', paddingBottom: 20 }}>
             <Header />
-            <Box height={100} />
-            <Typography variant="h4" style={{textAlign:'left'}} >My Library</Typography>
+            <Box height={75} />
+            <Typography variant="h4" style={{textAlign:'left',fontWeight:'bold'}} >My Library</Typography>
             <Box height={50} />
             <AppPromotion />
           </Container>
