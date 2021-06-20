@@ -19,7 +19,7 @@ function Footer() {
         <Grid container direction="row" xl={9} lg={10} sm={10} style={{paddingTop:50,marginTop:50, margin:'auto',}}>
             <Grid item container direction="column" md="6">
                 <IconAndSiteNm text="Blinkist"/>
-                <Typography style={{marginTop:10}} variant="h5" color="primary">Big ideas in Small Packages
+                <Typography style={{marginTop:10}} variant="h6" color="primary">Big ideas in Small Packages
                 start learning now</Typography>
                 <Grid direction="row">
                     <img style={imgStyle} src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"/>
@@ -27,19 +27,19 @@ function Footer() {
                 </Grid>
             </Grid>
             <Grid item container direction="column" md="2" >
-                <Typography style={someTopPadding} variant="h6">Editorial</Typography>
+                <Typography style={someTopPadding} variant="subtitle1">Editorial</Typography>
                 <Typography style={someTopPadding} variant="caption">What is non Fiction?</Typography>
                 <Typography style={someTopPadding} variant="caption">What to read Next</Typography>
                 <Typography style={someTopPadding} variant="caption">Benefits of Reading</Typography>
             </Grid>
             <Grid item container direction="column" md="2">
-                <Typography style={someTopPadding} variant="h6">Useful Links</Typography>
+                <Typography style={someTopPadding} variant="subtitle1">Useful Links</Typography>
                 <Typography style={someTopPadding} variant="caption">Pricing</Typography>
                 <Typography style={someTopPadding} variant="caption">What to read Next</Typography>
                 <Typography style={someTopPadding} variant="caption">Benefits of Reading</Typography>
             </Grid>
             <Grid item container direction="column" md="2">
-                <Typography style={someTopPadding} variant="h6">Company</Typography>
+                <Typography style={someTopPadding} variant="subtitle1">Company</Typography>
                 <Typography style={someTopPadding} variant="caption">About</Typography>
                 <Typography style={someTopPadding} variant="caption">Careers</Typography>
                 <Typography style={someTopPadding} variant="caption">Code of Conduct</Typography>

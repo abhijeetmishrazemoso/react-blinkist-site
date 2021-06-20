@@ -3,10 +3,8 @@
     /* align-self: center; */
     margin:auto;
     border: 1px solid black;
-    display: flex;
-    flex-direction: column;
     height: 520px;
-    width: 250px;
+    width: 260px;
     
 }
 

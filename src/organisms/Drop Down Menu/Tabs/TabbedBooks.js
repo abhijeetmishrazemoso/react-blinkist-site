@@ -12,6 +12,15 @@ function TabPanel({ children, value, index, ...other }){
         </div>
     );
 }
+function findIfEmpty(arrayObj){
+    for (let index = 0; index < arrayObj.length; index++) {
+        const element = arrayObj[index];
+        if(!(element === null)){
+            return false;
+        }
+    }
+    return true;
+}
 export default function TabbedBooks( {booksCurrReading, booksFinished}) {
     const [value, setValue] = React.useState(0);
 
@@ -20,13 +29,15 @@ export default function TabbedBooks( {booksCurrReading, booksFinished}) {
         setValue(newValue);
     };
     let renderBooksCurrentReading,renderBooksFinished;
+
     const renderWhenEmpty = <Container maxWidth="sm" style={{height:250}}></Container>;
-    if(booksCurrReading === undefined || booksCurrReading.length === 0){
+    
+    if(findIfEmpty(booksCurrReading)){
         renderBooksCurrentReading = renderWhenEmpty;
     }else{
         renderBooksCurrentReading = booksCurrReading;
     }
-    if(booksFinished === undefined || booksFinished.length === 0){
+    if( findIfEmpty(booksFinished) ){
         renderBooksFinished = renderWhenEmpty;
     }else{
         renderBooksFinished = booksFinished;
@@ -55,6 +66,6 @@ export default function TabbedBooks( {booksCurrReading, booksFinished}) {
     );
 };
 TabbedBooks.args = {
-cardsCur: PropTypes.object,
-cardsFin: PropTypes.object,
+    booksCurrReading: PropTypes.array,
+    booksFinished: PropTypes.array,
 };

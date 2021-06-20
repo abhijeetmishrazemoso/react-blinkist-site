@@ -8,34 +8,28 @@ import './BookCard.css';
 
 function BookCardMolecule({imageSrc, progress, title, subtitle, ...props}){
     const widthText = {
-        paddingBottom:5, paddingLeft:10
+        paddingBottom:10, paddingLeft:10
     };
+    
     return (
             <React.Fragment>
                 <Box className="flex-img" style={{ paddingLeft: 20, paddingRight: 20}}>
                     <Image src={imageSrc}/>
                 </Box>
-                <Typography variant="h6" style={widthText}>Building an inclusive Organisation!</Typography>
-                <Typography variant="body1" style={widthText}>Stephen-Frost, Raafi Karim...</Typography>
-                <Grid container direction="row">
-                    <Grid item direction="row" style={widthText}>
-                        <Grid item>
+                <Typography variant="h6" style={widthText}>{title}</Typography>
+                <Typography variant="body1" style={widthText}>{subtitle}</Typography>
+                <Box display="flex" style={widthText}>
+                    <Box display="flex" wrap="nowrap">
                             <AccessTimeIcon />&nbsp;
-                        </Grid>
-                        <Grid item style={{alignItems: 'center'}}>
                             <Typography variant="body2">15-minute read</Typography>
-                        </Grid>
-                    </Grid>
-                    <Grid item direction="row" justify="flex-end" style={{textAlign:"left", paddingLeft: 10}} wrap="nowrap">
-                        <Grid item>
+                    </Box>
+                    <Box display="flex" justify="flex-end" 
+                    style={{textAlign:"left", paddingLeft: 5, paddingRight:5}} wrap="nowrap">
                             <PersonIcon />&nbsp;
-                        </Grid>
-                        <Grid item style={{alignItems: 'center'}}>
                             <Typography variant="body2">17.5K reads</Typography>
-                        </Grid>
-                    </Grid>
+                    </Box>
                     
-                </Grid>
+                </Box>
                 <LinearProgress variant='determinate' value={progress}/>
             </React.Fragment>);
 }
