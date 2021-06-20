@@ -7,6 +7,7 @@ import { Typography } from '@material-ui/core';
 import Divider from '@material-ui/core/Divider';
 import AppPromotion from './molecules/AppPromotion';
 import TabsWithCards from './organisms/Drop Down Menu/Tabs/TabsWithCards';
+import Footer from './organisms/Footer';
 
 
 
@@ -35,6 +36,7 @@ function App() {
           <Container maxWidth="lg">
           <Container maxWidth="md"><Divider /></Container>
           <TabsWithCards imageSrc={imageSrc} />
+          <Footer />
           {/* <Grid container direction="row" justify="center">
               <BookCard  imageSrc={imageSrc} title="Nature and Man" subtitle="Does this not go anywhere?" />
               <BookCard  imageSrc={imageSrc} title="Nature and Man" subtitle="Does this not go anywhere?" />

@@ -1,4 +1,4 @@
-import { Container, Tab, Tabs } from '@material-ui/core';
+import { Container, Grid, Tab, Tabs } from '@material-ui/core';
 import React from 'react';
 import PropTypes from 'prop-types';
 
@@ -12,13 +12,25 @@ function TabPanel({ children, value, index, ...other }){
         </div>
     );
 }
-export default function TabbedBooks( {cardsCur, cardsFin}) {
+export default function TabbedBooks( {booksCurrReading, booksFinished}) {
     const [value, setValue] = React.useState(0);
 
     const handleChg = (event, newValue) => {
         console.log(newValue);
         setValue(newValue);
     };
+    let renderBooksCurrentReading,renderBooksFinished;
+    const renderWhenEmpty = <Container maxWidth="sm" style={{height:250}}></Container>;
+    if(booksCurrReading === undefined || booksCurrReading.length === 0){
+        renderBooksCurrentReading = renderWhenEmpty;
+    }else{
+        renderBooksCurrentReading = booksCurrReading;
+    }
+    if(booksFinished === undefined || booksFinished.length === 0){
+        renderBooksFinished = renderWhenEmpty;
+    }else{
+        renderBooksFinished = booksFinished;
+    }
     return (
       <Container >
           <Container style={{paddingBottom:20}}>
@@ -33,10 +45,10 @@ export default function TabbedBooks( {cardsCur, cardsFin}) {
                 </Tabs>
                 </Container>
                 <TabPanel value={value} index={0}>
-                    {( cardsCur !== null && cardsCur !== undefined)?cardsCur:" "}
+                <Grid container direction="row" justify="center">{renderBooksCurrentReading}</Grid>
                 </TabPanel>
                 <TabPanel value={value} index={1} >
-                    {(cardsFin !== null && cardsFin!==undefined)?cardsFin:" "}
+                <Grid container direction="row" justify="center">  {renderBooksFinished}</Grid>
                 </TabPanel>
             
       </Container>  
