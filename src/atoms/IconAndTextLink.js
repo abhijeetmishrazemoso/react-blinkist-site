@@ -9,7 +9,7 @@ function IconAndTextLink({ icon, text, href}) {
     };
     return (
         <Link href={href}>
-            <Grid container direction="row" style={{ padding: 20 }}>
+            <Grid container xl={12} direction="row" style={{ padding: 20,paddingLeft:50 }}>
                 <Grid item>
                     {icon}
                 </Grid>

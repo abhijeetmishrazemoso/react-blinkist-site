@@ -8,32 +8,33 @@ const styleOne = makeStyles({
   root: {
     padding: 10,
     margin: 20,
+    paddingRight:50,
   }
 }); 
-function LinksRow({ justify }) {
+function LinksHeader({ justify, text1, text2, text3 }) {
     return (
-      <Container maxWidth="md">
+      <Container maxWidth="xl">
         <Grid
           container 
           justify="center"
-          lg={12}
+          xl={12}
           direction="row"
-          spacing={2}
+          spacing={15}
           style={{
- textAlign: 'left', paddingBottom: 25, backgroundColor: '#EAF5DB', paddingTop: 10 
+ textAlign: 'left', paddingBottom: 15, backgroundColor: '#EAF5DB', paddingTop: 10 
 }}
         >
           <Grid item justify={justify} xs={4} className={styleOne.root}>
-            <Typography variant="body1" fontWeight="fontWeightBold">Explore By Category</Typography>
+            <Typography variant="body1" style={{fontWeight:'bold'}}>{text1}</Typography>
           </Grid>
           <Grid item justify={justify} xs={4} className={styleOne.root}>
-            <Typography variant="body1" fontWeight="fontWeightBold">
-              See recently added Titles
+            <Typography variant="body1" style={{fontWeight:'bold'}}>
+              {text2}
             </Typography>
           </Grid>
           <Grid item justify={justify} xs={4} className={styleOne.root}>
-            <Typography variant="body1" fontWeight="fontWeightBold">
-              See Popular Titles
+            <Typography variant="body1" style={{fontWeight:'bold'}}>
+              {text3}
             </Typography>
           </Grid>
         </Grid>
@@ -41,12 +42,14 @@ function LinksRow({ justify }) {
       </Container>
     );
 }
+export default LinksHeader;
 
-export default LinksRow;
-
-LinksRow.propTypes = {
+LinksHeader.propTypes = {
   justify: PropTypes.string,
 };
-LinksRow.defaultProps = {
+LinksHeader.defaultProps = {
   justify: 'flex-start',
+  text1: "Explore By Category",
+  text2: "See recently added titles",
+  text3: "See popular titles",
 };

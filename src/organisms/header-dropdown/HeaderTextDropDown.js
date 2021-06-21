@@ -5,7 +5,7 @@ import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
 import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
 
 function HeaderTextDropDown({
-    justify, fontSize, text
+    text, fontSize, notifyOnStateChange
 }) {
   const hoverStyle = makeStyles({
     root: {
@@ -27,6 +27,7 @@ function HeaderTextDropDown({
         setIcon(arrowDown);
       }
       setMenuOpen(!menuOpen);
+      notifyOnStateChange(menuOpen);
     };
     const divRef = React.createRef();
     
@@ -44,7 +45,7 @@ function HeaderTextDropDown({
       // divRef.className = underlineStyle;
     };
       return (
-        <Grid container direction="row" justify={justify}>
+        <Grid container direction="row">
           <div ref={divRef} onMouseOver={mouseOverUnderline} 
           className={hoverStyle.root} onMouseOut={removeUnderline} onClick={onClickChange} 
           style={{ display: 'flex', direction: 'row' }}>

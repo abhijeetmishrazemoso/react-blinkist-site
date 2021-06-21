@@ -3,6 +3,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 function TabPanel({ children, value, index, ...other }){
+    const renderDiv = <div style={{height:200}}></div>;
+    
     return (
         <div 
         hidden ={!(value === index)}
@@ -44,12 +46,11 @@ export default function TabbedBooks( {booksCurrReading, booksFinished}) {
     }
     return (
       <Container >
-          <Container style={{paddingBottom:20}}>
+          <Container style={{paddingBottom:20}} maxWidth="md">
           <Tabs
             value={value}
             onChange={handleChg}
             textColor="primary"
-            centered
             >
                     <Tab label="Currently Reading" />
                     <Tab label="Finished Reading" />

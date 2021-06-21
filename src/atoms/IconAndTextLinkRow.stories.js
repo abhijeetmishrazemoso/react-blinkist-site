@@ -10,24 +10,21 @@ export default {
 };
 
 const Template = (args) => <IconAndTextLinkRow {...args} />;
-const iconLink11 = {
-    icon:  <ComputerOutlinedIcon />,
-    text: "Computer Education",
-};
-const iconLink22 = {
-    icon:  <SchoolOutlinedIcon />,
-    text: "Child Education",
-};
-const iconLink33 = {
-    icon:  <HomeWorkOutlinedIcon />,
-    text: "Heritage & Culture",
-};
+ const  icon1=  <ComputerOutlinedIcon />;
+ const  text1= "Computer Education";
+const   icon2=  <SchoolOutlinedIcon />;
+const   text2= "Child Education";
+ const  icon3=  <HomeWorkOutlinedIcon />;
+ const  text4= "Heritage & Culture";
 
 export const IconsTexts = Template.bind({});
 IconsTexts.args = {
-    iconLink1: iconLink11,
-    iconLink2: iconLink22,
-    iconLink3: iconLink33,
+    icon1: icon1,
+    icon2: icon2,
+    icon3: icon3,
+    text1: text1,
+    text2: text2,
+    text3: text4,
 };
 
 

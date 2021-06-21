@@ -6,7 +6,7 @@ import IconAndSiteNm from '../../atoms/IconAndSiteNm';
 import HeaderTextDropDown from '../header-dropdown/HeaderTextDropDown';
 import './Header.css';
 
-const Header = () => {
+const Header = ({stateChangeNotify}) => {
 
 const font = "'Raleway', sans-serif";
   const theme = createMuiTheme({
@@ -27,7 +27,8 @@ const font = "'Raleway', sans-serif";
               </Grid>
                       
               <Grid justify="center" item sm={2}>
-                <HeaderTextDropDown text="Explore" fontSize="small" /> 
+                <HeaderTextDropDown text="Explore" fontSize="small" 
+                notifyOnStateChange={stateChangeNotify}/> 
               </Grid>
 
               <Grid justify="center" item sm={2}>
@@ -39,7 +40,7 @@ const font = "'Raleway', sans-serif";
               </Grid>
               
               <Grid justify="flex-end" item sm={4} style={{ textAlign: 'right' }}>
-                <HeaderTextDropDown justify="flex-end" text="Account" fontSize="small" />  
+                <HeaderTextDropDown text="Account" fontSize="small" notifyOnStateChange={stateChangeNotify}/>  
               </Grid>
             </Grid>
       </ThemeProvider>

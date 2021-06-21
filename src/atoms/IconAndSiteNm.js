@@ -8,7 +8,7 @@ function IconAndSiteNm({
   }) {
     return (
       <Grid container direction="row" alignItems="flex-start">
-        <AddCircleOutlineIcon fontSize="large" />
+        <AddCircleOutlineIcon fontSize="medium" />
         <span>&nbsp;</span>
         <Typography variant="h6" style={{ fontWeight: 'bolder' }}>{text}</Typography>
       </Grid>
