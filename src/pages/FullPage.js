@@ -1,4 +1,4 @@
-import { Box, Divider, Grid, Typography } from '@material-ui/core';
+import { Box, createMuiTheme, Divider, Grid, ThemeProvider, Typography } from '@material-ui/core';
 import { Container } from '@material-ui/core';
 import React from 'react';
 import AppPromotion from '../molecules/AppPromotion';
@@ -10,6 +10,16 @@ import AddBookModal from '../organisms/ModalNewBook';
 
 
 const imageSrc = 'https://images.pexels.com/photos/159306/construction-site-build-construction-work-159306.jpeg';
+
+const font = "'Raleway', sans-serif";
+const theme = createMuiTheme({
+  typography: {
+    fontFamily: font,
+    button: {
+      textTransform: 'none',
+    }
+  }
+});
 
 function FullPage() {
     
@@ -25,6 +35,7 @@ function FullPage() {
 
     }
     return (
+        <ThemeProvider theme={theme}>
         <Container maxWidth="xl" style={{backgroundColor: 'black', margin: 'auto'}}>
             <Grid direction="column" xl={9} lg={10} sm={10} style={{ margin:'auto', backgroundColor: 'white' }}>
             <Container xl={6} maxWidth="md" style={{ backgroundColor: 'white', paddingBottom: 20 }}>
@@ -43,6 +54,7 @@ function FullPage() {
             </Container>
             </Grid>
       </Container>
+      </ThemeProvider>
     );
 }
 
