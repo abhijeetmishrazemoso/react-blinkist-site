@@ -13,20 +13,20 @@ function BookCardMolecule({imageSrc, progress, title, subtitle, ...props}){
     
     return (
             <React.Fragment>
-                <Box className="flex-img" style={{ paddingLeft: 20, paddingRight: 20}}>
+                <Box className="flex-img" style={{ paddingLeft: 30, paddingRight: 30}}>
                     <Image src={imageSrc}/>
                 </Box>
                 <Typography variant="h6" style={widthText}>{title}</Typography>
                 <Typography variant="body1" style={widthText}>{subtitle}</Typography>
                 <Box display="flex" style={widthText}>
                     <Box display="flex" wrap="nowrap">
-                            <AccessTimeIcon />&nbsp;
-                            <Typography variant="body2">15-minute read</Typography>
+                            <AccessTimeIcon fontSize="small"/>&nbsp;
+                            <Typography variant="caption">15-minute read</Typography>
                     </Box>
                     <Box display="flex" justify="flex-end" 
-                    style={{textAlign:"left", paddingLeft: 5, paddingRight:5}} wrap="nowrap">
-                            <PersonIcon />&nbsp;
-                            <Typography variant="body2">17.5K reads</Typography>
+                    style={{textAlign:"right", paddingLeft: 5, paddingRight:5}} wrap="nowrap">
+                            <PersonIcon fontSize="small"/>&nbsp;
+                            <Typography variant="caption">17.5K reads</Typography>
                     </Box>
                     
                 </Box>

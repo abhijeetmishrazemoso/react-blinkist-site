@@ -27,7 +27,9 @@ function HeaderTextDropDown({
         setIcon(arrowDown);
       }
       setMenuOpen(!menuOpen);
-      notifyOnStateChange(menuOpen);
+      if (notifyOnStateChange !== undefined){
+        notifyOnStateChange(menuOpen);
+      }
     };
     const divRef = React.createRef();
     

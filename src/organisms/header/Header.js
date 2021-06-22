@@ -1,13 +1,13 @@
 import {
-   createMuiTheme, Grid, ThemeProvider, Typography
+   createMuiTheme, Grid, Link, ThemeProvider, Typography
    } from '@material-ui/core';
 import React from 'react';
 import IconAndSiteNm from '../../atoms/IconAndSiteNm';
 import HeaderTextDropDown from '../header-dropdown/HeaderTextDropDown';
 import './Header.css';
 
-const Header = ({stateChangeNotify}) => {
-
+const Header = ({stateChangeNotify, openModal}) => {
+let isModalOpen = false;
 const font = "'Raleway', sans-serif";
   const theme = createMuiTheme({
     typography: {
@@ -17,7 +17,11 @@ const font = "'Raleway', sans-serif";
       }
     }
     });
-// const classes = useStyles();
+    function callDropDown(event){
+      event.preventDefault();
+      isModalOpen =!isModalOpen;
+      openModal(isModalOpen);
+    }
     return (
       <>
       <ThemeProvider theme={theme}>
@@ -36,11 +40,13 @@ const font = "'Raleway', sans-serif";
               </Grid>
 
               <Grid justify="center" item sm={2}>
-                <Typography variant="body1">Add Book</Typography>
+                <Link onClick={callDropDown} href="#"> 
+                  <Typography variant="body1">Add Book</Typography>
+                </Link>
               </Grid>
               
               <Grid justify="flex-end" item sm={4} style={{ textAlign: 'right' }}>
-                <HeaderTextDropDown text="Account" fontSize="small" notifyOnStateChange={stateChangeNotify}/>  
+                <HeaderTextDropDown text="Account" fontSize="small"/>  
               </Grid>
             </Grid>
       </ThemeProvider>

@@ -21,8 +21,11 @@ function LinksHeader({ justify, text1, text2, text3 }) {
           direction="row"
           spacing={15}
           style={{
- textAlign: 'left', paddingBottom: 15, backgroundColor: '#EAF5DB', paddingTop: 10 
-}}
+              textAlign: 'left', 
+              paddingBottom: 15, 
+              backgroundColor: '#EAF5DB', 
+              paddingTop: 10 
+          }}
         >
           <Grid item justify={justify} xs={4} className={styleOne.root}>
             <Typography variant="body1" style={{fontWeight:'bold'}}>{text1}</Typography>
