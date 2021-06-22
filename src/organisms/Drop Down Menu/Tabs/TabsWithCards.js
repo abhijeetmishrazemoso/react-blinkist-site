@@ -37,10 +37,8 @@ export default function TabsWithCards({ imageSrc }) {
         }
     }
     addDummyDataToArray(currReading.length, currFinished);
-    const [currReadingBookCards, setCurrReadingBookCards] = React.useState(currReading);
-    const [currFinishedBookCards, setCurrFinishedBookCards] = React.useState(currFinished);
     const [completeTab,setCompleteTab] = React.useState(
-    getCompleteTab(currReadingBookCards,currFinishedBookCards));
+    getCompleteTab(currReading,currFinished));
         
     function updateTabs(index, previousReadingState){
     console.log(`updateTabs method called with index-${index} & prevReadState- ${previousReadingState}`);
@@ -61,8 +59,6 @@ export default function TabsWithCards({ imageSrc }) {
                 propss.title, propss.subtitle, index, index, updateTabs);
                 currFinished[index] = getDummyNode(index);
             }
-            setCurrReadingBookCards(currReading);
-            setCurrFinishedBookCards(currFinished);
             setCompleteTab(getCompleteTab(currReading,currFinished));
         }
         // React.useEffect(() => {

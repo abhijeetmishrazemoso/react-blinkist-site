@@ -1,5 +1,5 @@
 .flex-div{
-    box-shadow: -10px 5px rgb(173, 173, 173);
+    box-shadow: -10px 5px 5px rgb(173, 173, 173);
     /* align-self: center; */
     border: 1px solid black;
     display: flex;

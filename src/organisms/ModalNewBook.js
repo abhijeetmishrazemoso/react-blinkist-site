@@ -2,14 +2,22 @@ import { Typography } from '@material-ui/core';
 import { Modal, Button, TextField, Paper} from '@material-ui/core';
 import React from 'react';
 
-function ModalNewBook({modalOpen, onCancel, onSubmit}) {
+function AddBookModal({modalOpen, onCancel, onSubmit}) {
     const title='';
     const subtitle='';
     const minToRead='';
     const marginStyle = {margin:25};
+    const defaultFormInput = {
+        title:'',
+        subtitle:'',
+
+    };
     function onCancelModal(event){
         event.preventDefault();
         onCancel(false);
+    }
+    function onSubmitForm(event){
+
     }
     return (
         <Modal open={modalOpen} style={{marginTop:75,backgroundColor: 'rgba(220,220,220,.2)'}}>
@@ -17,11 +25,11 @@ function ModalNewBook({modalOpen, onCancel, onSubmit}) {
                         <Paper style={{padding:15,margin:5}}>
                             <form noValidate>
                                 <Typography variant="h5" style={marginStyle}>Add Book</Typography>
-                                <TextField style={marginStyle} label="Enter Title" value={title} required variant="outlined"/><br/>
-                                <TextField style={marginStyle} label="Enter Subtitle" value={subtitle} required variant="outlined"/><br/>
-                                <TextField style={marginStyle} label="Enter Minutes to read" value={minToRead} required variant="outlined"/><br/>
+                                <TextField style={marginStyle} label="Enter Title" required variant="outlined" onChange={(e)=>console.log(e.target.value)}/><br/>
+                                <TextField style={marginStyle} label="Enter Subtitle" required variant="outlined"/><br/>
+                                <TextField style={marginStyle} label="Enter Minutes to read" required variant="outlined"/><br/>
                                 <Button style={marginStyle} variant="contained" size="large" onClick={onCancelModal} color="primary">Cancel</Button>
-                                <Button style={marginStyle} variant="contained" size="large" onClick={onSubmit} color="secondary">Submit</Button>
+                                <Button style={marginStyle} variant="contained" size="large" onClick={onSubmitForm} color="secondary">Submit</Button>
                             </form>
                         </Paper>
                     </div>
@@ -29,4 +37,4 @@ function ModalNewBook({modalOpen, onCancel, onSubmit}) {
     );
 }
 
-export default ModalNewBook;
+export default AddBookModal;

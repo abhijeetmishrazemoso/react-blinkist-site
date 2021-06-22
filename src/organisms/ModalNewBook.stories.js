@@ -1,12 +1,12 @@
 import React from 'react';
-import ModalNewBook from './ModalNewBook';
+import AddBookModal from './ModalNewBook';
 
 export default {
     title: 'organism/Modal Form',
-    component: ModalNewBook,
+    component: AddBookModal,
 };
 
-const Template = (args) => <ModalNewBook {...args} />;
+const Template = (args) => <AddBookModal {...args} />;
 
 export const modal = Template.bind({});
 

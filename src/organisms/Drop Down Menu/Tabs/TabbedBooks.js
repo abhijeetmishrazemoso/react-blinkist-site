@@ -3,8 +3,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 function TabPanel({ children, value, index, ...other }){
-    const renderDiv = <div style={{height:200}}></div>;
-    
     return (
         <div 
         hidden ={!(value === index)}
