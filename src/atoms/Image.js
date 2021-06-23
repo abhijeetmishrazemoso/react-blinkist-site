@@ -1,7 +1,8 @@
-import './image.css';
+import React from 'react';
 
-function Image(props){
-    return (<img src={props.src} alt=" "/>);
+
+function Image({src, styleObject}){
+    return (<img src={src} style={styleObject} alt=" "/>);
 }
 
 export default Image;

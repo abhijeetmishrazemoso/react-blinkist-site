@@ -3,21 +3,17 @@ import { Modal, Button, TextField, Paper} from '@material-ui/core';
 import React from 'react';
 
 function AddBookModal({modalOpen, onCancel, onSubmit}) {
-    const title='';
-    const subtitle='';
-    const minToRead='';
+    let title='';
+    let subtitle='';
     const marginStyle = {margin:25};
-    const defaultFormInput = {
-        title:'',
-        subtitle:'',
-
-    };
+    
     function onCancelModal(event){
         event.preventDefault();
         onCancel(false);
     }
-    function onSubmitForm(event){
-
+    function onSubmitForm(){
+        onSubmit(title, subtitle);
+        onCancel(false);
     }
     return (
         <Modal open={modalOpen} style={{marginTop:75,backgroundColor: 'rgba(220,220,220,.2)'}}>
@@ -25,9 +21,8 @@ function AddBookModal({modalOpen, onCancel, onSubmit}) {
                         <Paper style={{padding:15,margin:5}}>
                             <form noValidate>
                                 <Typography variant="h5" style={marginStyle}>Add Book</Typography>
-                                <TextField style={marginStyle} label="Enter Title" required variant="outlined" onChange={(e)=>console.log(e.target.value)}/><br/>
-                                <TextField style={marginStyle} label="Enter Subtitle" required variant="outlined"/><br/>
-                                <TextField style={marginStyle} label="Enter Minutes to read" required variant="outlined"/><br/>
+                                <TextField style={marginStyle} label="Enter Title" required variant="outlined" onChange={(e)=>(title = (e.target.value))}/><br/>
+                                <TextField style={marginStyle} label="Enter Subtitle" required variant="outlined" onChange={(e)=>(subtitle = (e.target.value))}/><br/>
                                 <Button style={marginStyle} variant="contained" size="large" onClick={onCancelModal} color="primary">Cancel</Button>
                                 <Button style={marginStyle} variant="contained" size="large" onClick={onSubmitForm} color="secondary">Submit</Button>
                             </form>

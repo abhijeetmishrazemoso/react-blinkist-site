@@ -20,7 +20,7 @@ function AppPromotion() {
                 <Typography variant="body2" style={{ fontBold }}>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat necessitatibus, animi iusto odit ex repudiandae 
                 reprehenderit voluptates eveniet, deleniti beatae ipsum non, iste ea consequuntur.</Typography>
               </Grid> 
-              <Grid container item direction="column" md={3}>
+              <Grid container direction="column" md={3} style={{marginTop:40}}>
                     <img alt=" " style={imgStyle} src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"/>
                     <img alt=" " style={imgStyle} src="https://lh3.googleusercontent.com/cjsqrWQKJQp9RFO7-hJ9AfpKzbUb_Y84vXfjlP0iRHBvladwAfXih984olktDhPnFqyZ0nu9A5jvFwOEQPXzv7hr3ce3QVsLN8kQ2Ao=s0"/>
               </Grid>

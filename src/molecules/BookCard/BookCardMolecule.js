@@ -10,11 +10,18 @@ function BookCardMolecule({imageSrc, progress, title, subtitle, ...props}){
     const widthText = {
         paddingBottom:10, paddingLeft:10
     };
+    const imageStyle = {
+        justifyContent: 'flex-start',
+        width: 260,
+        height: 285,
+        borderTopLeftRadius: 15,
+        borderTopRightRadius: 15,
     
+    };
     return (
             <React.Fragment>
-                <Box className="flex-img" style={{ paddingLeft: 30, paddingRight: 30}}>
-                    <Image src={imageSrc}/>
+                <Box className="flex-img">
+                    <Image src={imageSrc} styleObject={imageStyle}/>
                 </Box>
                 <Typography variant="h6" style={widthText}>{title}</Typography>
                 <Typography variant="body1" style={widthText}>{subtitle}</Typography>
@@ -24,7 +31,7 @@ function BookCardMolecule({imageSrc, progress, title, subtitle, ...props}){
                             <Typography variant="caption">15-minute read</Typography>
                     </Box>
                     <Box display="flex" justify="flex-end" 
-                    style={{textAlign:"right", paddingLeft: 5, paddingRight:5}} wrap="nowrap">
+                    style={{marginLeft: 35, paddingRight:5}} wrap="nowrap">
                             <PersonIcon fontSize="small"/>&nbsp;
                             <Typography variant="caption">17.5K reads</Typography>
                     </Box>

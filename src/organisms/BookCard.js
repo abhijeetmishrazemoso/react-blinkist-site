@@ -37,30 +37,30 @@ function BookCard({imageSrc, title, subtitle, readingTabProp,index, key, updateS
             setVisibility(revealGrid);
         }
     };
-
-        return (<Box component="div" style={{padding:15}} display={visibility}>
-                    <Grid item lg={3} sm={6} md={4} xs={12} >
-                        <Box className="flex-div">
-                            <BookCardMolecule imageSrc={imageSrc}
-                            name='nice' progress={progress} title={title} subtitle={subtitle} />
-                                <Box style={{ padding: 5 }}>
-                                    <Box style={{textAlign: "center"}} display="flex" flexDirection="row">
-                                        <Box p={1}>
-                                            <Button variant='contained' color='primary' onClick={increaseProgress}
-                                            style={{marginBottom:5}} size="small">Read More!
-                                            </Button>
-                                        </Box>
-                                        <Box p={1}>
-                                            <Button variant='contained' color='primary' onClick={checkAndSetReading} size="small">
-                                                {reading === currReading?"Finished Reading":"Currently Reading"}
-                                            </Button>
-                                        </Box>
+    return (<Box component="div" style={{padding:15}} display={visibility}>
+                <Grid item lg={3} sm={6} md={4} xs={12} >
+                    <Box className="flex-div">
+                        <BookCardMolecule imageSrc={imageSrc}
+                        name='nice' progress={progress} title={title} subtitle={subtitle} />
+                            <Box style={{ padding: 2 }}>
+                                <Box style={{textAlign: "center"}} display="flex" flexDirection="row">
+                                    <Box p={1}>
+                                        <Button variant='contained' color='primary' onClick={increaseProgress}
+                                        style={{marginBottom:5}} size="small">Read More!
+                                        </Button>
+                                    </Box>
+                                    <Box p={1}>
+                                        <Button style={{marginBottom:5}} variant='contained' color='primary' onClick={checkAndSetReading} 
+                                        size="small">
+                                            {reading === currReading?"Finished Reading":"Currently Reading"}
+                                        </Button>
                                     </Box>
                                 </Box>
-                        </Box>
-                    </Grid>
-                </Box>
-        );
+                            </Box>
+                    </Box>
+                </Grid>
+            </Box>
+    );
 }
 
 export default BookCard;
