@@ -21,10 +21,18 @@ function AddBookModal({modalOpen, onCancel, onSubmit}) {
                         <Paper style={{padding:15,margin:5}}>
                             <form noValidate>
                                 <Typography variant="h5" style={marginStyle}>Add Book</Typography>
-                                <TextField style={marginStyle} label="Enter Title" required variant="outlined" onChange={(e)=>(title = (e.target.value))}/><br/>
-                                <TextField style={marginStyle} label="Enter Subtitle" required variant="outlined" onChange={(e)=>(subtitle = (e.target.value))}/><br/>
-                                <Button style={marginStyle} variant="contained" size="large" onClick={onCancelModal} color="primary">Cancel</Button>
-                                <Button style={marginStyle} variant="contained" size="large" onClick={onSubmitForm} color="secondary">Submit</Button>
+
+                                <TextField style={marginStyle} label="Enter Title" required variant="outlined" 
+                                onChange={(e)=>(title = (e.target.value))}/><br/>
+
+                                <TextField style={marginStyle} label="Enter Subtitle" required variant="outlined" 
+                                onChange={(e)=>(subtitle = (e.target.value))}/><br/>
+
+                                <Button style={marginStyle} variant="contained" size="large" 
+                                onClick={onCancelModal} color="primary">Cancel</Button>
+                                
+                                <Button style={marginStyle} variant="contained" size="large" 
+                                onClick={onSubmitForm} color="secondary">Submit</Button>
                             </form>
                         </Paper>
                     </div>

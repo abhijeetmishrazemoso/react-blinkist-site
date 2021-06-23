@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Grid, LinearProgress, Typography } from "@material-ui/core";
+import { Box, LinearProgress, Typography } from "@material-ui/core";
 import AccessTimeIcon from '@material-ui/icons/AccessTime';
 import PersonIcon from '@material-ui/icons/Person';
 import Image from "../../atoms/Image";

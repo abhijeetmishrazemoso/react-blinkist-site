@@ -112,8 +112,8 @@ function FullPage() {
               <Container maxWidth="lg">
                   <Container maxWidth="md"><Divider /></Container>
                     {completeTab}
-                  <Footer />
-              </Container>
+                  </Container>
+                <Footer />
               </Grid>
           </Container>
       </ThemeProvider>
