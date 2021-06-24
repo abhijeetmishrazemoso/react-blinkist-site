@@ -56,14 +56,14 @@ export default function TabbedBooks( {booksCurrReading, booksFinished}) {
                 </Container>
                 <TabPanel value={value} index={0}>
                      <Container maxWidth="md"> 
-                        <Grid container direction="row" style={{margin:'auto',minHeight:480}} justify="center">
+                        <Grid container direction="row" style={{margin:'auto',minHeight:480}} justify="flex-start">
                         {renderBooksCurrentReading}
                         </Grid>
                      </Container>
                 </TabPanel>
                 <TabPanel value={value} index={1} >
                 <Container maxWidth="md"> 
-                    <Grid container direction="row" style={{margin:'auto', minHeight:480}} justify="center">
+                    <Grid container direction="row" style={{margin:'auto', minHeight:480}} justify="flex-start">
                         {renderBooksFinished}
                     </Grid>
                 </Container>

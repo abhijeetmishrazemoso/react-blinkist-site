@@ -22,20 +22,20 @@ function LinksHeader({ justify, text1, text2, text3 }) {
           spacing={15}
           style={{
               textAlign: 'left', 
-              paddingBottom: 15, 
+              paddingBottom: 10, 
               backgroundColor: '#EAF5DB', 
               paddingTop: 10 
           }}
         >
-          <Grid item justify={justify} xs={4} className={styleOne.root}>
+          <Grid item justify={justify} md={4} className={styleOne.root}>
             <Typography variant="body1" style={{fontWeight:'bold'}}>{text1}</Typography>
           </Grid>
-          <Grid item justify={justify} xs={4} className={styleOne.root}>
+          <Grid item justify={justify} md={4} className={styleOne.root}>
             <Typography variant="body1" style={{fontWeight:'bold'}}>
               {text2}
             </Typography>
           </Grid>
-          <Grid item justify={justify} xs={4} className={styleOne.root}>
+          <Grid item justify={justify} md={4} className={styleOne.root}>
             <Typography variant="body1" style={{fontWeight:'bold'}}>
               {text3}
             </Typography>

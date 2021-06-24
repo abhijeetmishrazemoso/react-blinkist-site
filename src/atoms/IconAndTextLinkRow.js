@@ -10,13 +10,19 @@ const notiNoneIcon = <NotificationsNoneIcon fontSize="medium"/>;
 const monOnOutLinedIcon = <MonetizationOnOutlinedIcon fontSize="medium"/>;
 const computer = <ComputerOutlinedIcon fontSize="medium"/>;
 
-function IconAndTextLinkRow({ icon1,text1,icon2,text2,icon3,text3 }) {
+function IconAndTextLinkRow({ icon1,text1,icon2,text2,icon3,text3,filterByCategory }) {
  
     return (
-        <Grid container direction="row">
-            <IconAndTextLink icon={icon1} text={text1} sm={2}/>
-            <IconAndTextLink icon={icon2} text={text2} sm={2}/>
-            <IconAndTextLink icon={icon3} text={text3} sm={2}/>
+        <Grid container direction="row" justify="center" style={{paddingRight:25,marginRight:50}}>
+            <Grid container direction="row" item md={4} justify="flex-start">
+                <IconAndTextLink icon={icon1} text={text1} filterByCategory={filterByCategory}/>
+            </Grid>
+            <Grid container item md={4}>
+                <IconAndTextLink icon={icon2} text={text2} filterByCategory={filterByCategory}/>
+            </Grid>
+            <Grid container item md={4}>
+                <IconAndTextLink icon={icon3} text={text3} filterByCategory={filterByCategory}/>
+            </Grid>
         </Grid>
     );
 }
@@ -31,9 +37,9 @@ IconAndTextLinkRow.propTypes = {
     text2: PropTypes.string,
     text3: PropTypes.string,
 };
-const text1= "Computer Education";
+const text4= "Computer Education";
 const text2= "Child Education";
-const text4= "Heritage & Culture";
+const text1= "Heritage & Culture";
 IconAndTextLinkRow.defaultProps = {
     icon1: notiNoneIcon,
     icon2: monOnOutLinedIcon,

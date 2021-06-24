@@ -8,18 +8,13 @@ function IconAndTextLink({ icon, text, href}) {
     const mouseOverUnderline = (e) => {
     };
     return (
-        <Link href={href}>
-            <Grid container xl={12} direction="row" style={{ padding: 20,paddingLeft:50 }}>
-                <Grid item>
-                    {icon}
+        <Link href={href} style={{color: 'rgba(10,10,10,.9', padding:10,marginBottom:15}}>
+                    <Grid container style={{direction:'row'}}> 
+                        <Grid item style={{display:"inline-block"}}>
+                            {icon}
+                        </Grid>
+                    &nbsp; &nbsp;<Typography variant="body1">{text}</Typography>
                 </Grid>
-                <Grid item>
-                    &nbsp;&nbsp;
-                </Grid>
-                <Grid item>
-                    <Typography variant="body1">{text}</Typography>
-                </Grid>
-            </Grid>
         </Link>
     );
 }

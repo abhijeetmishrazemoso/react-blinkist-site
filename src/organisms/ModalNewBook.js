@@ -30,7 +30,7 @@ function AddBookModal({modalOpen, onCancel, onSubmit}) {
 
                                 <Button style={marginStyle} variant="contained" size="large" 
                                 onClick={onCancelModal} color="primary">Cancel</Button>
-                                
+
                                 <Button style={marginStyle} variant="contained" size="large" 
                                 onClick={onSubmitForm} color="secondary">Submit</Button>
                             </form>
