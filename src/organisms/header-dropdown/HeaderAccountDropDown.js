@@ -1,10 +1,10 @@
-import { Grid, makeStyles, Typography } from '@material-ui/core';
 import React from 'react';
+import { Grid, makeStyles, Typography } from '@material-ui/core';
 import PropTypes from 'prop-types';
 import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
 import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
 
-function HeaderTextDropDown({
+function HeaderAccountDropDown({
     text, fontSize, notifyOnStateChange, justify
 }) {
   const hoverStyle = makeStyles({
@@ -57,16 +57,17 @@ function HeaderTextDropDown({
         </Grid>
       );
 }
-HeaderTextDropDown.propTypes = {
+HeaderAccountDropDown.propTypes = {
   justify: PropTypes.string,
   fontSize: PropTypes.string,
   text: PropTypes.string,
 };
 
-HeaderTextDropDown.defaultProps = {
+HeaderAccountDropDown.defaultProps = {
   justify: 'center',
   fontSize: 'default',
   text: 'Explore',
 };
 
-export default HeaderTextDropDown;
+
+export default HeaderAccountDropDown;

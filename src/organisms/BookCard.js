@@ -42,7 +42,7 @@ function BookCard({imageSrc, title, subtitle, readingTabProp,index, key, updateS
     };
     
     console.log(`display is ${display} in title-${title}`);
-    return (<Link href="#">
+    return (    
                 <Box component="div" style={{padding:15}} display={display?visibility:'none'}>
                     <Grid item lg={3} sm={6} md={4} xs={12} >
                         <Box className="flex-div">
@@ -66,7 +66,7 @@ function BookCard({imageSrc, title, subtitle, readingTabProp,index, key, updateS
                         </Box>
                     </Grid>
                 </Box>
-            </Link>
+            
     );
 }
 

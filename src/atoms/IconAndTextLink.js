@@ -3,12 +3,16 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import HomeIcon from '@material-ui/icons/Home';
 
-function IconAndTextLink({ icon, text, href}) {
+function IconAndTextLink({ icon, text, href, filterByCategory}) {
 
     const mouseOverUnderline = (e) => {
     };
+    function filterCat(){
+        filterByCategory(text);
+    }
     return (
-        <Link href={href} style={{color: 'rgba(10,10,10,.9', padding:10,marginBottom:15}}>
+        <Link href={href} style={{color: 'rgba(10,10,10,.9', padding:10,marginBottom:15}}
+        onClick={filterCat}>
                     <Grid container style={{direction:'row'}}> 
                         <Grid item style={{display:"inline-block"}}>
                             {icon}
