@@ -2,11 +2,9 @@ import { Container, Typography } from '@material-ui/core';
 import { Grid } from '@material-ui/core';
 import React from 'react';
 import IconAndSiteNm from '../atoms/IconAndSiteNm';
+import Image from '../atoms/Image';
 
 function Footer() {
-    const style = {
-        height: 500,
-    };
     const imgStyle = {
         height:35,
         width:100,
@@ -22,8 +20,8 @@ function Footer() {
                     <Typography style={{marginTop:10,marginBottom:10}} variant="h6" color="primary">Big ideas in Small Packages
                     start learning now</Typography>
                     <Grid direction="row">
-                        <img style={imgStyle} alt=" " src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"/>
-                        <img style={imgStyle} alt=" " src="https://lh3.googleusercontent.com/cjsqrWQKJQp9RFO7-hJ9AfpKzbUb_Y84vXfjlP0iRHBvladwAfXih984olktDhPnFqyZ0nu9A5jvFwOEQPXzv7hr3ce3QVsLN8kQ2Ao=s0"/>
+                        <Image src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" styleObject={imgStyle} />
+                        <Image src="https://lh3.googleusercontent.com/cjsqrWQKJQp9RFO7-hJ9AfpKzbUb_Y84vXfjlP0iRHBvladwAfXih984olktDhPnFqyZ0nu9A5jvFwOEQPXzv7hr3ce3QVsLN8kQ2Ao=s0" styleObject={imgStyle} />
                     </Grid>
                 </Grid>
                 <Grid item container direction="column" md="2" >

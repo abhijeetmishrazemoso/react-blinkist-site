@@ -1,8 +1,6 @@
-import { Box, createMuiTheme, Divider, Grid,Typography } from '@material-ui/core';
-import { Container } from '@material-ui/core';
+import { Box,Typography } from '@material-ui/core';
 import React from 'react';
 import AppPromotion from '../molecules/AppPromotion';
-import Footer from '../organisms/Footer';
 import Header from '../organisms/header/Header';
 import AddBookModal from '../organisms/ModalNewBook';
 import TabbedBooks from '../organisms/Drop Down Menu/Tabs/TabbedBooks';
@@ -12,15 +10,7 @@ import FullPageTem from '../templates/FullPageTem';
 
 const imageSrc = 'https://images.pexels.com/photos/159306/construction-site-build-construction-work-159306.jpeg';
 const categories = ['EntrepreneurShip', 'Science', 'Economics'];
-const font = "'Raleway', sans-serif";
-const theme = createMuiTheme({
-  typography: {
-    fontFamily: font,
-    button: {
-      textTransform: 'none',
-    }
-  }
-});
+
 const bookCardDefaultDisplay = true;
 
 function getNewBookCard(imageSrc,readingTabProp, title, subtitle, index, key, updateState, display, category){
