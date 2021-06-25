@@ -8,6 +8,7 @@ import AddBookModal from '../organisms/ModalNewBook';
 import TabbedBooks from '../organisms/Drop Down Menu/Tabs/TabbedBooks';
 import BookCard from '../organisms/BookCard';
 import ExploreDropDownMenuFin from '../molecules/DropDown-Menu/ExploreDropDownMenuFin';
+import FullPageTem from '../templates/FullPageTem';
 
 const imageSrc = 'https://images.pexels.com/photos/159306/construction-site-build-construction-work-159306.jpeg';
 const categories = ['EntrepreneurShip', 'Science', 'Economics'];
@@ -183,31 +184,17 @@ function FullPage() {
       console.log(`After ${menuOpen}`);
       // console.log(menuOpen);
     }
+    const headerAndModal = (<><Header stateChangeNotify={getStateChangeFromChildren} openModal={openTheModal} 
+      dropDownState={menuOpen} updateSearchValue={filterBookCardsByTitle}/>
+      <AddBookModal modalOpen={modalOpen} onCancel={openTheModal} onSubmit={onSubmitModal}/></>);
+    const exploreDropDownMenu =   (<ExploreDropDownMenuFin menuOpen={menuOpen} filterByCategory={filterByCategory}
+      categories={categories}
+      />);
+      const mainHeading =<Typography variant="h4" style={{textAlign:'left',fontWeight:'bold'}} >My Library</Typography>;
+      const appPromo = <AppPromotion />;
     return (
-          <Container maxWidth="xl" style={{backgroundColor: 'black', margin: 'auto'}}>
-              <Grid direction="column" xl={9} lg={10} sm={10} style={{ margin:'auto', backgroundColor: 'white' }}>
-              <Container maxWidth="md" style={{ backgroundColor: 'white', paddingBottom: 20 }}>
-                  <Header stateChangeNotify={getStateChangeFromChildren} openModal={openTheModal} 
-                  dropDownState={menuOpen} updateSearchValue={filterBookCardsByTitle}/>
-                  <AddBookModal modalOpen={modalOpen} onCancel={openTheModal} onSubmit={onSubmitModal}/>
-                  <Container component="div" style={{width:900,top:60,position:'absolute',margin:'auto',backgroundColor:'#F1F6F4'}}>
-                    <ExploreDropDownMenuFin menuOpen={menuOpen} filterByCategory={filterByCategory}
-                    categories={categories}
-                    />
-                  </Container>
-                  <Box height={75} />
-                  <Typography variant="h4" style={{textAlign:'left',fontWeight:'bold'}} >My Library</Typography>
-                  <Box height={50} />
-                  <AppPromotion />
-              </Container>
-              <Container maxWidth="lg">
-                  <Container maxWidth="md"><Divider /></Container>
-                    {completeTab}
-                  </Container>
-                <Footer />
-              </Grid>
-          </Container>
-    );
+      <FullPageTem headerAndModal={headerAndModal} exploreDropDownMenu={exploreDropDownMenu} 
+      mainHeading={mainHeading} appPromo={appPromo} completeTab={completeTab}/>);
 }
 
 export default FullPage;
