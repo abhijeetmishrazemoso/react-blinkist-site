@@ -2,6 +2,7 @@ import { createMuiTheme, ThemeProvider } from '@material-ui/core';
 import React from 'react';
 import './App.css';
 import FullPage from './pages/FullPage';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 const font = "'Raleway', sans-serif";
 const theme = createMuiTheme({
@@ -14,9 +15,11 @@ const theme = createMuiTheme({
 });
 function App() {
   return (
-    <ThemeProvider theme={theme}>
-      <FullPage />
-    </ThemeProvider>
+    <Router>
+      <ThemeProvider theme={theme}>
+        <FullPage />
+      </ThemeProvider>
+    </Router>
   );
 }
 

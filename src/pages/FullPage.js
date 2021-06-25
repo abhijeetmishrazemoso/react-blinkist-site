@@ -1,4 +1,4 @@
-import { Box, createMuiTheme, Divider, Grid, ThemeProvider, Typography } from '@material-ui/core';
+import { Box, createMuiTheme, Divider, Grid,Typography } from '@material-ui/core';
 import { Container } from '@material-ui/core';
 import React from 'react';
 import AppPromotion from '../molecules/AppPromotion';
@@ -184,7 +184,6 @@ function FullPage() {
       // console.log(menuOpen);
     }
     return (
-        <ThemeProvider theme={theme}>
           <Container maxWidth="xl" style={{backgroundColor: 'black', margin: 'auto'}}>
               <Grid direction="column" xl={9} lg={10} sm={10} style={{ margin:'auto', backgroundColor: 'white' }}>
               <Container maxWidth="md" style={{ backgroundColor: 'white', paddingBottom: 20 }}>
@@ -208,7 +207,6 @@ function FullPage() {
                 <Footer />
               </Grid>
           </Container>
-      </ThemeProvider>
     );
 }
 
